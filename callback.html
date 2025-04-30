@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<ව
+
+<html lang="en">
+<head>
+  <title>Snapchat OAuth Callback</title>
+</head>
+<body>
+  <h1>Snapchat Authorization Callback</h1>
+  <p id="code">Please copy the authorization code from the URL above.</p>
+  <script>
+    // Extract code from URL query parameters
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    if (code) {
+      document.getElementById('code').innerText = 
+        `Authorization Code: ${code}\nPlease copy this code for use in your application.`;
+    } else {
+      document.getElementById('code').innerText = 
+        'No authorization code found in URL.';
+    }
+  </script>
+</body>
+</html>
